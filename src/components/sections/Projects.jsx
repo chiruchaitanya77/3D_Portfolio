@@ -6,10 +6,10 @@ import ProjectCard from "../cards/ProjectCard";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-contnet: center;
+  justify-content: center;
   margin-top: 50px;
-  padding: 0px 16px;
-  position: rlative;
+  padding: 60px 30px 100px 30px;
+  position: relative;
   z-index: 1;
   align-items: center;
 `;
@@ -54,8 +54,8 @@ const ToggleButtonGroup = styled.div`
   color: ${({ theme }) => theme.primary};
   font-size: 16px;
   border-radius: 12px;
-font-weight 500;
-margin: 22px 0;
+  font-weight :500;
+  margin: 22px 0;
 @media (max-width: 768px){
     font-size: 12px;
 }
@@ -86,7 +86,7 @@ const CardContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 28px;
+  gap: 40px;
   flex-wrap: wrap;
 `;
 
@@ -98,7 +98,7 @@ const Projects = ({ openModal, setOpenModal }) => {
         <Title>Projects</Title>
         <Desc
           style={{
-            marginBottom: "40px",
+            marginBottom: "30px",
           }}
         >
           {/*I have worked on a wide range of projects. From web apps to android*/}
@@ -112,12 +112,12 @@ const Projects = ({ openModal, setOpenModal }) => {
             onClick={() => setToggle("all")}
           > ALL
 
-          {/*</ToggleButton>*/}
-          {/*<Divider />*/}
-          {/*<ToggleButton*/}
-          {/*  active={toggle === "web app"}*/}
-          {/*  onClick={() => setToggle("web app")}*/}
-          {/*> WEB APP'S*/}
+          </ToggleButton>
+          <Divider />
+          <ToggleButton
+            active={toggle === "web app"}
+            onClick={() => setToggle("web app")}
+          > WEB APP'S
 
           {/*</ToggleButton>*/}
           {/*<Divider />*/}

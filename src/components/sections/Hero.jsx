@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
 import HeroImg from "../../images/HeroImg.jpeg";
-//import HeroBgAnimation from "../HeroBgAnimation";
+import HeroBgAnimation from "../HeroBgAnimation";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import {
@@ -11,19 +11,19 @@ import {
   headContentAnimation,
   headTextAnimation,
 } from "../../utils/motion";
-//import StarCanvas from "../canvas/Stars";
-//import {Boxes} from "../canvas/background-boxes";
+import StarCanvas from "../canvas/Stars";
 
 
 const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 80px 30px;
+  padding: 120px 30px 0 30px;
+  height: 100vh;
   z-index: 1;
 
   @media (max-width: 960px) {
-    padding: 66px 16px;
+    padding: 0 0 1000px 0;
   }
 
   @media (max-width: 640px) {
@@ -66,7 +66,7 @@ const HeroRightContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-contents: center;
+    justify-content: center;
     margin-bottom: 80px;
   }
 
@@ -135,7 +135,7 @@ const SubTitle = styled.div`
 const ResumeButton = styled.a`
   -webkit-appearance: button;
   -moz-appearance: button;
-  appearance: button;
+  //appearance: button;
   text-decoration: none;
 
   width: 95%;
@@ -167,7 +167,7 @@ const ResumeButton = styled.a`
      &:hover {
         transform: scale(1.05);
     transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
+    box-shadow:  20px 20px 60px #1F2634;
     filter: brightness(1);
     }    
     
@@ -206,14 +206,14 @@ const HeroBg = styled.div`
   max-width: 1360px;
   overflow: hidden;
   padding: 0 30px;
-  top: 50%;
+  top: 60%;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 
   @media (max-width: 960px) {
     justify-content: center;
-    padding: 0 0px;
+    padding: 0;
   }
 `;
 
@@ -221,12 +221,10 @@ const Hero = () => {
   return (
     <div id="About">
       <HeroContainer>
+        <StarCanvas />
         <HeroBg>
-          {/*<StarCanvas />*/}
-          {/* <HeroBgAnimation /> */}
-          {/* <Boxes/> */}
+           <HeroBgAnimation />
         </HeroBg>
-
         <motion.div {...headContainerAnimation}>
           <HeroInnerContainer>
             <HeroLeftContainer>

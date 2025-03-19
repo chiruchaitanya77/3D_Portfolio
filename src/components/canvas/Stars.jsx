@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 const StyledCanvasWrapper = styled.div`
   width: 100%;
-  height: auto;
+  height: 100vh;
   position: absolute;
   inset: 0;
 `;

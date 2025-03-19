@@ -9,6 +9,8 @@
     "@mui/icons-material": "^5.15.10",
     "@mui/lab": "^5.0.0-alpha.165",
     "@mui/material": "^5.15.10",
+    "@react-buddy/ide-toolbox": "^2.4.0",
+    "@react-buddy/palette-mui": "^5.0.2",
     "@react-three/drei": "^9.99.0",
     "@react-three/fiber": "^8.15.16",
     "@testing-library/jest-dom": "^5.17.0",

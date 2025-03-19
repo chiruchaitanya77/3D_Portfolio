@@ -13,10 +13,9 @@ const Card = styled.div`
   background-color: ${({ theme }) => theme.card};
   cursor: pointer;
   border-radius: 10px;
-  box-shadow: rgba(23, 92, 230, 0.3) 0px 4px 24px;
+  box-shadow: rgba(23, 92, 230, 0.3) 0 4px 24px;
   overflow: hidden;
   padding: 26px 20px;
-  display: flex;
   flex-direction: column;
   gap: 14px;
   transition: all 0.5s ease-in-out;
@@ -102,12 +101,12 @@ const Avatar = styled.img`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border: 3px solid ${({ theme }) => theme.card};
 `;
-const Button = styled.a`
-  color: ${({ theme }) => theme.primary};
-  text-decoration: none;
-  font-weight: 600;
-  text-align: center;
-`;
+// const Button = styled.a`
+//   color: ${({ theme }) => theme.primary};
+//   text-decoration: none;
+//   font-weight: 600;
+//   text-align: center;
+// `;
 
 const ProjectCard = ({ project, setOpenModal }) => {
   return (
