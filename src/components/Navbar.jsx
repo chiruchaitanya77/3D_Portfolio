@@ -60,6 +60,7 @@ const NavLink = styled.a`
   text-decoration: none;
   &:hover {
     color: ${({ theme }) => theme.primary};
+    //text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 2px #fff, 0 0 4px #fff;
   }
 `;
 
@@ -88,9 +89,11 @@ const GithubButton = styled.a`
   font-weight: 500;
   transition: all 0.6s ease-in-out;
   text-decoration: none;
+  box-shadow: 0 0 15px rgba(200, 162, 200, 0.3);
   &:hover {
     background: ${({ theme }) => theme.primary};
     color: ${({ theme }) => theme.text_primary};
+    box-shadow: 0 0 45px #854CE6;
   }
 `;
 
@@ -146,26 +149,18 @@ const Navbar = () => {
           <NavLink href="#Skills">Skills</NavLink>
           {/*<NavLink href="#Experience">Experience</NavLink>*/}
           <NavLink href="#Projects">Projects</NavLink>
+          <NavLink href="#Certificates">Certificates</NavLink>
           <NavLink href="#Education">Education</NavLink>
         </NavItems>
 
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#About">
-              About
-            </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Skills">
-              Skills
-            </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Experience">
-              Experience
-            </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Projects">
-              Projects
-            </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Education">
-              Education
-            </NavLink>
+            <NavLink onClick={() => setIsOpen(!isOpen)} href="#About">About</NavLink>
+            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Skills">Skills</NavLink>
+            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Experience">Experience</NavLink>
+            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Projects">Projects</NavLink>
+            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Certificates">Certificates</NavLink>
+            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Education">Education</NavLink>
             <GithubButton
               href={Bio.github}
               target="_Blank"

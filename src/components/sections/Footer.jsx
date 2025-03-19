@@ -5,7 +5,6 @@ import {
   FacebookRounded,
   Instagram,
   LinkedIn,
-  Twitter,
 } from "@mui/icons-material";
 
 const FooterContainer = styled.div`
@@ -90,6 +89,7 @@ const Footer = () => {
           <NavLink href="#Skills">Skills</NavLink>
           <NavLink href="#Experience">Experience</NavLink>
           <NavLink href="#Projects">Projects</NavLink>
+          <NavLink href="#Certificates">Certificates</NavLink>
           <NavLink href="#Education">Education</NavLink>
         </Nav>
         <SocialMediaIcons>

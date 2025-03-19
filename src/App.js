@@ -4,11 +4,12 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import Hero from "./components/sections/Hero";
 import Skills from "./components/sections/Skills";
-//import Experience from "./components/sections/Experience";
+// import Experience from "./components/sections/Experience";
 import Education from "./components/sections/Education";
 //import StartCanvas from "./components/canvas/Stars";
 import { AnimatePresence } from "framer-motion";
 import Projects from "./components/sections/Projects";
+import Certificates from "./components/sections/Certificates";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
 import ProjectDetails from "./components/Dialog/ProjectDetails";
@@ -47,13 +48,15 @@ function App() {
         <Body>
           {/*<StartCanvas />*/}
           <AnimatePresence>
-          <div>
             <Hero />
             <Wrapper>
               <Skills />
               {/*<Experience />*/}
             </Wrapper>
             <Projects openModal={openModal} setOpenModal={setOpenModal} />
+            <Wrapper>
+              <Certificates />
+            </Wrapper>
             <Wrapper>
               <Education />
               <Contact />
@@ -65,7 +68,6 @@ function App() {
                   setOpenModal={setOpenModal}
                 />
               )}
-          </div>
           </AnimatePresence>
         </Body>
       </BrowserRouter>

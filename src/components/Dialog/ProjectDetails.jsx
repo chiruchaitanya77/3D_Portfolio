@@ -68,7 +68,7 @@ const Image = styled.img`
   object-fit: cover;
   border-radius: 12px;
   margin-top: 30px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 `;
 
 const Label = styled.div`

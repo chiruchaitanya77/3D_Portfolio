@@ -9,8 +9,9 @@ import EducationCard from "../cards/EducationCard";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-contnet: center;
-  position: rlative;
+  justify-content: center;
+  position: relative;
+  padding: 60px 30px 0 30px;
   z-index: 1;
   align-items: center;
 `;
