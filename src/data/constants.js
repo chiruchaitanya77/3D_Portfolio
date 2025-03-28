@@ -337,6 +337,55 @@ export const education = [
 ];
 
 export const projects = [
+  {
+    id: 1,
+    title: "QR Code-Based Attendance System",
+    date: "Feb 2025",
+    description: "Developed a Django-based attendance system that automates student attendance tracking using QR codes. The system generates unique QR codes for students, which can be scanned via a mobile/web application for real-time attendance marking. It integrates Django for the backend, OpenCV for QR scanning, and a user-friendly web interface for students and administrators.",
+    image: "QR-School.png",
+    tags: ["Python", "Django", "OpenCV", "QR Code", "OAuth" , "Sheets API", "Drive API"],
+    category: "web app",
+    github: "https://github.com/chiruchaitanya77/QR_Attendance_System",
+    webapp: "https://qr-attendance-system-19l7.onrender.com/"
+  },
+  {
+    id: 2,
+    title: "PPE Compliance Detection System",
+    date: "Mar 2025",
+    description: "Developed a DeepLearning based PPE Compliance Detection System uses YOLOv8 to detect helmets, vests, gloves, and shoes in real-time from CCTV footage, ensuring workplace safety. Built using Python Django and HTML/CSS, JS, it alerts managers of violations and simplifies compliance monitoring.",
+    image: "Poster.png",
+    tags: ["Python", "Django","YOLOv8", "OpenCV", "Deep Learning", "SQLite3" , "Torchvision", "Jinja2", "Drive API", "Pygame", "Pillow"],
+    category: ["web app", "machine learning"],
+    github: "https://github.com/chiruchaitanya77/PPE_Detection_System",
+    webapp: "https://comingsoonpg.netlify.app/"
+  },
+  {
+    id: 3,
+    title: "Object Detection and Tracking",
+    date: "Sep 2024 - Nov 2024",
+    description:
+        "Developed a web interactive object detection application capable of detecting objects in images and tracking in videos/ webcam, using pre-trained Ultralytics-Yolov9 model, PyTorch, OpenCV, TensorFlow, and flask, and used Django for the project's front end. Achievements: Achieved an accuracy of 95.8% in accurately detecting objects from images/ videos.",
+    image:
+        "obj_thumbnail.png",
+    tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
+    // category: "web app",
+    category: ["web app", "machine learning"],
+    github: "https://github.com/chiruchaitanya77/Object_Detection_and_Tracking_Web_App",
+    webapp: "https://objectdetectionandtrackingwebapp.onrender.com",
+  },
+  {
+    id: 4,
+    title: "Face Recognition",
+    date: "Jan 2021",
+    description:
+        "A Face recognition python app made with OpenCV. It uses face_recognition library to detect faces. It uses the webcam to detect faces. It also has a search bar to search for a particular face.",
+    image:
+        "https://img.freepik.com/premium-vector/face-recognition-isometric-website-template_53562-9550.jpg",
+    tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
+    category: "machine learning",
+    github: "https://github.com/chiruchaitanya77/Face_Detection_ML_Python",
+    webapp: "https://comingsoonpg.netlify.app/",
+  },
   // {
   //   id: 11,
   //   title: "DecisionHub",
@@ -429,19 +478,6 @@ export const projects = [
   //   github: "https://github.com/rishavchanda/Project-Management-App",
   //   webapp: "https://comingsoonpg.netlify.app/",
   // },
-  {
-    id: 2,
-    title: "Object Detection and Tracking",
-    date: "Sep 2024 - Nov 2024",
-    description:
-        "Developed a web interactive object detection application capable of detecting objects in images and tracking in videos/ webcam, using pre-trained Ultralytics-Yolov9 model, PyTorch, OpenCV, TensorFlow, and flask, and used Django for the project's front end. Achievements: Achieved an accuracy of 95.8% in accurately detecting objects from images/ videos.",
-    image:
-        "obj_thumbnail.png",
-    tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
-    category: "machine learning",
-    github: "https://github.com/chiruchaitanya77/Object_Detection_and_Tracking_Web_App",
-    webapp: "https://objectdetectionandtrackingwebapp.onrender.com",
-  },
   // {
   //   id: 2,
   //   title: "Brain Tumor Detection",
@@ -534,18 +570,6 @@ export const projects = [
   //   github: "https://github.com/rishavchanda/Breaking-Bad",
   //   webapp: "https://comingsoonpg.netlify.app/",
   // },
-  {
-    id: 10,
-    title: "QR Code-Based Attendance System",
-    date: "Feb 2024",
-    description: "Developed a Django-based attendance system that automates student attendance tracking using QR codes. The system generates unique QR codes for students, which can be scanned via a mobile/web application for real-time attendance marking. It integrates Django for the backend, OpenCV for QR scanning, and a user-friendly web interface for students and administrators.",
-    image: "https://github.com/user-attachments/assets/dcb603bf-58fc-466b-aff2-a7d9dcc6a590",
-    tags: ["Python", "Django", "OpenCV", "QR Code", "OAuth" , "Sheets API", "Drive API"],
-    category: "web app",
-    github: "https://github.com/chiruchaitanya77/QR_Attendance_System",
-    webapp: "https://qr-attendance-system-19l7.onrender.com/"
-  },
-
   // {
   //   id: 7,
   //   title: "Quiz App",
@@ -559,19 +583,6 @@ export const projects = [
   //   github: "https://github.com/rishavchanda/Quiz-Earn",
   //   webapp: "https://comingsoonpg.netlify.app/",
   // },
-  {
-    id: 8,
-    title: "Face Recognition",
-    date: "Jan 2021",
-    description:
-      "A Face recognition python app made with OpenCV. It uses face_recognition library to detect faces. It uses the webcam to detect faces. It also has a search bar to search for a particular face.",
-    image:
-      "https://img.freepik.com/premium-vector/face-recognition-isometric-website-template_53562-9550.jpg",
-    tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
-    category: "machine learning",
-    github: "https://github.com/chiruchaitanya77/Face_Detection_ML_Python",
-    webapp: "https://comingsoonpg.netlify.app/",
-  },
 ];
 
 export const certificates = [
