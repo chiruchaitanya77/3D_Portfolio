@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { projects } from "../../data/constants";
 import ProjectCard from "../cards/ProjectCard";
+import { motion, useInView } from "framer-motion";
 
 const Container = styled.div`
   display: flex;
@@ -27,6 +28,7 @@ const Wrapper = styled.div`
     flex-direction: column;
   }
 `;
+
 const Title = styled.div`
   font-size: 52px;
   text-align: center;
@@ -38,6 +40,7 @@ const Title = styled.div`
     font-size: 32px;
   }
 `;
+
 const Desc = styled.div`
   font-size: 18px;
   text-align: center;
@@ -54,12 +57,13 @@ const ToggleButtonGroup = styled.div`
   color: ${({ theme }) => theme.primary};
   font-size: 16px;
   border-radius: 12px;
-  font-weight :500;
+  font-weight: 500;
   margin: 22px 0;
-@media (max-width: 768px){
+  @media (max-width: 768px) {
     font-size: 12px;
-}
+  }
 `;
+
 const ToggleButton = styled.div`
   padding: 8px 18px;
   border-radius: 6px;
@@ -77,6 +81,7 @@ const ToggleButton = styled.div`
   background:  ${theme.primary + 20};
   `}
 `;
+
 const Divider = styled.div`
   width: 1.5px;
   background: ${({ theme }) => theme.primary};
@@ -92,79 +97,78 @@ const CardContainer = styled.div`
 
 const Projects = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = useState("all");
+
+  // Track when the container is 60% visible
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.2 }); // Trigger animation at 40%
+
   return (
-    <Container id="Projects">
-      <Wrapper>
-        <Title>Projects</Title>
-        <Desc
-          style={{
-            marginBottom: "30px",
-          }}
-        >
-          {/*I have worked on a wide range of projects. From web apps to android*/}
-          {/*apps. Here are some of my projects.*/}
-          I have worked on few projects and currently building. Here are my completed projects.
-        </Desc>
+      <Container id="Projects">
+        <Wrapper>
+          <Title>Projects</Title>
+          <Desc
+              style={{
+                marginBottom: "30px",
+              }}
+          >
+            I have worked on few projects and currently building. Here are my completed projects.
+          </Desc>
 
-        <ToggleButtonGroup>
-          <ToggleButton
-            active={toggle === "all"}
-            onClick={() => setToggle("all")}
-          > ALL
+          <ToggleButtonGroup>
+            <ToggleButton
+                active={toggle === "all"}
+                onClick={() => setToggle("all")}
+            >
+              ALL
+            </ToggleButton>
+            <Divider />
+            <ToggleButton
+                active={toggle === "web app"}
+                onClick={() => setToggle("web app")}
+            >
+              WEB APP'S
+            </ToggleButton>
+            <Divider />
+            <ToggleButton
+                active={toggle === "machine learning"}
+                onClick={() => setToggle("machine learning")}
+            >
+              AI/ML/DL
+            </ToggleButton>
+          </ToggleButtonGroup>
 
-          </ToggleButton>
-          <Divider />
-          <ToggleButton
-            active={toggle === "web app"}
-            onClick={() => setToggle("web app")}
-          > WEB APP'S
+          {/* Animate the entire CardContainer when 60% in view */}
+          <motion.div
+              ref={ref}
+              initial={{ opacity: 0, y: 50 }} // Initially hidden
+              animate={isInView ? { opacity: 1, y: 0 } : {}} // Animate when in view
+              transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <CardContainer>
+              {toggle === "all" &&
+                  projects.map((project) => (
+                      <ProjectCard
+                          key={project.id}
+                          project={project}
+                          openModal={openModal}
+                          setOpenModal={setOpenModal}
+                      />
+                  ))}
 
-          {/*</ToggleButton>*/}
-          {/*<Divider />*/}
-          {/*<ToggleButton*/}
-          {/*  active={toggle === "android app"}*/}
-          {/*  onClick={() => setToggle("android app")}*/}
-          {/*> ANDROID APP'S*/}
-
-          </ToggleButton>
-          <Divider />
-          <ToggleButton
-            active={toggle === "machine learning"}
-            onClick={() => setToggle("machine learning")}
-          > MACHINE LEARNING
-
-          </ToggleButton>
-        </ToggleButtonGroup>
-        {/* <CardContainer>
-          {toggle === "all" &&
-            projects.map((project) => <ProjectCard project={project} />)}
-          {projects
-            .filter((item) => item.category === toggle)
-            .map((project) => (
-              <ProjectCard project={project} />
-            ))}
-        </CardContainer> */}
-        <CardContainer>
-          {toggle === "all" &&
-            projects.map((project) => (
-              <ProjectCard
-                project={project}
-                openModal={openModal}
-                setOpenModal={setOpenModal}
-              />
-            ))}
-          {projects
-            .filter((item) => item.category === toggle)
-            .map((project) => (
-              <ProjectCard
-                project={project}
-                openModal={openModal}
-                setOpenModal={setOpenModal}
-              />
-            ))}
-        </CardContainer>
-      </Wrapper>
-    </Container>
+              {projects
+                  .filter((item) => item.category.includes(toggle))
+                  .map((project) => (
+                      <ProjectCard
+                          key={project.id}
+                          project={project}
+                          openModal={openModal}
+                          setOpenModal={setOpenModal}
+                      />
+                  ))}
+            </CardContainer>
+          </motion.div>
+        </Wrapper>
+      </Container>
   );
 };
 

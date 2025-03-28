@@ -184,6 +184,10 @@ const Scroller = styled.div`
     position: relative;
     -webkit-mask: linear-gradient(90deg, transparent, black 30%, white 70%, transparent);
     mask: linear-gradient(90deg, transparent, black 30%, white 70%, transparent);
+    @media (max-width: 640px) {
+        -webkit-mask: linear-gradient(90deg, transparent, black 10%, white 90%, transparent);
+        mask: linear-gradient(90deg, transparent, black 10%, white 90%, transparent);
+    }
 `;
 
 const CertificateContainer = styled.div`
@@ -195,6 +199,9 @@ const CertificateContainer = styled.div`
     //&:hover {
     //    animation-play-state: paused;
     //}
+    @media (max-width: 640px) {
+        animation: ${scrollAnimation} 50s linear infinite; /* Slow down the scroll */
+    }
 `;
 
 const CertificateCard = styled.div`

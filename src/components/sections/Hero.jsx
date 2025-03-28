@@ -26,8 +26,8 @@ const HeroContainer = styled.div`
     padding: 0 0 1000px 0;
   }
 
-  @media (max-width: 640px) {
-    padding: 32px 16px;
+  @media (max-width: 768px) {
+    height: 1000px;
   }
 
   clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
@@ -39,7 +39,6 @@ const HeroInnerContainer = styled.div`
   align-items: center;
   width: 100%;
   max-width: 1100px;
-
   @media (max-width: 960px) {
     flex-direction: column;
   }
@@ -85,7 +84,7 @@ const Title = styled.div`
     text-align: center;
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: 640px) {
     font-size: 40px;
     line-height: 48px;
     margin-bottom: 8px;
@@ -104,7 +103,7 @@ const TextLoop = styled.div`
     text-align: center;
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: 640px) {
     font-size: 22px;
     line-height: 48px;
     margin-bottom: 16px;
@@ -126,7 +125,7 @@ const SubTitle = styled.div`
     text-align: center;
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: 640px) {
     font-size: 16px;
     line-height: 32px;
   }

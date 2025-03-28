@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import {
-  FacebookRounded,
+  FacebookRounded, GitHub,
   Instagram,
   LinkedIn,
 } from "@mui/icons-material";
@@ -87,7 +87,7 @@ const Footer = () => {
         <Nav>
           <NavLink href="#About">About</NavLink>
           <NavLink href="#Skills">Skills</NavLink>
-          <NavLink href="#Experience">Experience</NavLink>
+          {/*<NavLink href="#Experience">Experience</NavLink>*/}
           <NavLink href="#Projects">Projects</NavLink>
           <NavLink href="#Certificates">Certificates</NavLink>
           <NavLink href="#Education">Education</NavLink>
@@ -105,8 +105,11 @@ const Footer = () => {
           <SocialMediaIcon href={Bio.insta} target="display">
             <Instagram />
           </SocialMediaIcon>
+          <SocialMediaIcon href={Bio.github} target="display">
+            <GitHub/>
+          </SocialMediaIcon>
         </SocialMediaIcons>
-        <Copyright>&copy; 2024 Chiru Chaitanya. All rights reserved.</Copyright>
+        <Copyright>&copy; 2025 Chiru Chaitanya. All rights reserved.</Copyright>
       </FooterWrapper>
     </FooterContainer>
   );
